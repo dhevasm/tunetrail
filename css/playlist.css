@@ -1,0 +1,195 @@
+ 
+    .playlist-header, .playlist-content, #no-songs {
+        padding-top: 20px;
+        margin-left: 250px;
+      }
+  
+     
+      @media (max-width: 830px) {
+    
+        .playlist-header, .playlist-content, #no-songs {
+          margin-left: 0;
+          }
+      }
+  
+      .playlist-header {
+          margin-bottom: 20px;
+      }
+      
+      .playlist-banner {
+          background: linear-gradient(to bottom, #1db954, #121212);
+          border-radius: 8px;
+          padding: 30px;
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-end;
+          color: white;
+      }
+      
+      .playlist-info {
+          display: flex;
+          align-items: center;
+      }
+      
+      .playlist-img {
+          width: 180px;
+          height: 180px;
+          background-color: #333;
+          color: #1db954;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 70px;
+          border-radius: 5px;
+          box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+          margin-right: 24px;
+      }
+      
+      .playlist-text h1 {
+          font-size: 2.5rem;
+          font-weight: bold;
+          margin-bottom: 8px;
+      }
+      
+      .playlist-text p {
+          font-size: 14px;
+          color: #ddd;
+      }
+      
+      .playlist-actions {
+          display: flex;
+      }
+      
+      .btn-success {
+        background-color: #1db954;
+        padding: 12px 30px;
+        font-weight: bold;
+    }
+
+    .btn-danger {
+        padding: 12px 30px;
+        font-weight: bold;
+    }
+      
+      .playlist-table {
+          background-color: rgba(0,0,0,0.1);
+          border-radius: 8px;
+          overflow: hidden;
+      }
+      
+      .playlist-table-header {
+          padding: 12px 16px;
+          font-size: 14px;
+          font-weight: 500;
+          color: #b3b3b3;
+          border-bottom: 1px solid rgba(255,255,255,0.1);
+          text-transform: uppercase;
+      }
+      
+      .playlist-item {
+          padding: 12px 16px;
+          transition: background-color 0.2s;
+          border-radius: 4px;
+          margin: 2px 0;
+      }
+      
+      .playlist-item:hover {
+          background-color: rgba(255,255,255,0.1);
+      }
+      
+      .playlist-item img {
+          width: 40px;
+          height: 40px;
+          object-fit: cover;
+          border-radius: 4px;
+          margin-right: 16px;
+      }
+      
+      .playlist-title {
+          font-weight: 500;
+          margin-bottom: 4px;
+      }
+      
+      .playlist-artist {
+          font-size: 14px;
+          color: #b3b3b3;
+      }
+      
+      .playlist-actions button {
+          background: none;
+          border: none;
+          color: #b3b3b3;
+          padding: 6px;
+          transition: color 0.2s;
+      }
+      
+      .playlist-actions button:hover {
+          color: #fff;
+      }
+      
+      .playlist-actions .remove-button {
+          color: #ff5555;
+      }
+      
+      #no-playlist {
+          display: none;
+          color: #b3b3b3;
+      }
+      
+      #no-playlist i {
+          color: #1db954;
+      }
+      
+      @media (max-width: 830px) {
+          .playlist-img {
+              width: 140px;
+              height: 140px;
+              font-size: 50px;
+          }
+          
+          .playlist-text h1 {
+              font-size: 1.8rem;
+          }
+          
+          .playlist-banner {
+              flex-direction: column;
+              align-items: flex-start;
+          }
+          
+          .playlist-actions {
+              margin-top: 20px;
+          }
+          
+          .playlist-table-header .col-4
+          {
+              display: none;
+          }
+          
+          .playlist-item .col-4 {
+              display: none;
+          }
+          
+          .playlist-item .col-2 {
+              text-align: right;
+          }
+      }
+      
+      @media (max-width: 576px) {
+          .playlist-img {
+              width: 100px;
+              height: 100px;
+              font-size: 40px;
+              margin-right: 16px;
+          }
+          
+          .playlist-text h1 {
+              font-size: 1.5rem;
+          }
+          
+          .playlist-item {
+              padding: 8px;
+          }
+      }
+  
+
+      

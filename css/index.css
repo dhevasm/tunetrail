@@ -1,0 +1,336 @@
+
+
+.search-input {
+    background-color: var(--lighter-bg);
+    border: 1px solid #333;
+    color: var(--text-color);
+}
+
+.search-input:focus {
+    background-color: var(--lighter-bg);
+    border-color: var(--primary-color);
+    color: var(--text-color);
+    box-shadow: none;
+}
+
+.search-btn {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    border: none;
+}
+
+.search-btn:hover {
+    background-color: #1ed760;
+}
+
+/* Section Titles */
+.section-title {
+    color: var(--text-color);
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    letter-spacing: -0.04em;
+}
+
+.section-container {
+    margin-bottom: 2.5rem;
+}
+
+/* Cards */
+.music-card {
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    border: none;
+    overflow: hidden;
+    transition: background-color 0.3s ease;
+    padding: 1rem;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+}
+
+.music-card:hover {
+    background-color: var(--hover-bg);
+}
+
+.card-body {
+    padding: 1rem 0 0.5rem 0;
+}
+
+.card-title {
+    color: var(--text-color);
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    letter-spacing: -0.02em;
+}
+
+.card-text {
+    color: var(--text-secondary);
+    font-size: 0.8rem;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+}
+
+
+.img-container {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 0.75rem;
+    border-radius: 4px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+}
+
+.card-img-top {
+    aspect-ratio: 1/1;
+    width: 100%;
+    object-fit: cover;
+    object-fit: cover;
+    transition: opacity 0.3s ease;
+    border-radius: 4px;
+}
+
+/* Untuk membuat gambar berbentuk kotak sempurna (1:1) */
+.square-img {
+    aspect-ratio: 1/1;
+    width: 100%;
+    object-fit: cover;
+}
+
+.play-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.music-card:hover .play-overlay {
+    opacity: 1;
+}
+
+.play-btn {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transform: translateY(8px);
+    opacity: 0;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+}
+
+.music-card:hover .play-btn {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.play-btn:hover {
+    transform: scale(1.05);
+    background-color: #1ed760;
+}
+
+.play-btn i {
+    font-size: 1.5rem;
+    margin-left: 2px; /* Offset to center the play icon */
+}
+
+/* Audio Player */
+.audio-player {
+    margin-top: 0.75rem;
+}
+
+audio {
+    width: 100%;
+    height: 32px;
+    background-color: var(--lighter-bg);
+    border-radius: 4px;
+}
+
+audio::-webkit-media-controls-panel {
+    background-color: var(--lighter-bg);
+}
+
+audio::-webkit-media-controls-play-button {
+    background-color: var(--primary-color);
+    border-radius: 50%;
+}
+
+/* Artist Name and Release Date */
+.artist-name {
+    color: var(--text-secondary);
+    font-weight: 400;
+    font-size: 0.8rem;
+}
+
+.release-date {
+    color: var(--text-secondary);
+    font-size: 0.75rem;
+    opacity: 0.8;
+}
+
+/* Buttons */
+.btn-outline {
+    border: 1px solid transparent;
+    color: var(--text-secondary);
+    background-color: transparent;
+    transition: all 0.3s ease;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.btn-outline:hover {
+    color: var(--text-color);
+    text-decoration: underline;
+}
+
+/* Scroll Container */
+.scroll-container {
+    overflow-x: auto;
+    overflow-y: hidden;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
+    padding-bottom: 1rem;
+    margin: 0 -16px;
+    padding: 0 16px 16px;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+}
+
+/* For Webkit browsers (Chrome, Safari) */
+.scroll-container::-webkit-scrollbar {
+    height: 6px;
+}
+
+.scroll-container::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 3px;
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 3px;
+    transition: background-color 0.3s ease;
+}
+
+.scroll-container::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Text Utilities */
+.text-truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* Quick Choose Genres */
+.quick-choose .music-card {
+    padding: 1rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    background: linear-gradient(135deg, #450af5, #c4efd9);
+    position: relative;
+    overflow: hidden;
+}
+
+.quick-choose .music-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.quick-choose .music-card .card-body {
+    position: relative;
+    z-index: 2;
+}
+
+.quick-choose .music-card:hover {
+    transform: scale(1.05);
+}
+
+.quick-choose .card-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+.artist-card {
+    transition: all 0.3s ease;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.artist-card:hover {
+    background-color: rgba(0,0,0,0.05);
+}
+
+.avatar-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.avatar-img {
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    border: 2px solid #eee;
+    transition: all 0.3s ease;
+}
+
+.artist-card:hover .avatar-img {
+    transform: scale(1.05);
+    border-color: #007bff;
+}
+
+
+.profile-img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.avatar-placeholder {
+    width: 150px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary-dark);
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+    border-radius: 50%;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .container-fluid {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    
+    .section-title {
+        font-size: 1.3rem;
+    }
+    
+    .music-card {
+        padding: 0.75rem;
+    }
+}
