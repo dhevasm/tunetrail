@@ -87,7 +87,7 @@
       }
       
       .playlist-item {
-          padding: 12px 16px;
+          padding: 12px 0;
           transition: background-color 0.2s;
           border-radius: 4px;
           margin: 2px 0;
@@ -171,6 +171,10 @@
           
           .playlist-item .col-2 {
               text-align: right;
+          }
+
+          .playlist-item .col-5{
+            font-size: 0.8rem;
           }
       }
       

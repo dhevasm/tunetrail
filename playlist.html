@@ -265,9 +265,9 @@
                     <div class="playlist-table-header">
                         <div class="row align-items-center justify-content-between">
                             <div class="col-1">#</div>
-                            <div class="col-5">TITLE</div>
+                            <div class="col-3 col-md-5">TITLE</div>
                             <div class="col-4">ARTIST</div>
-                            <div class="col-2">ACTIONS</div>
+                            <div class="col-3 col-md-2">ACTIONS</div>
                         </div>
                     </div>
                     <div id="playlist-songs-list">
@@ -321,7 +321,7 @@
                       </div>
                       <div class="col-4">${song.artist?.name || 'Unknown Artist'}</div>
                       <div class="col-2">
-                            <div class="playlist-actions d-flex justify-content-end">
+                            <div class="playlist-actions d-flex justify-content-end justify-content-md-start">
                                 <button data-song-id="${song.id}" class="play-song-btn" title="Play">
                                     <i class="fas fa-play"></i>
                                 </button>
