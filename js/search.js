@@ -64,7 +64,7 @@ $(document).ready(function() {
                                 onclick='playMusic("${music.audio}")' 
                                 data-src='${JSON.stringify(music)}'>
                         <div class="item-content">
-                            <img src="${music.cover_img ? "src/cover_image/" + music.cover_img : "assets/images/default-cover.png"}" 
+                            <img src="${music.cover_img ? "berliana src/cover_image/" + music.cover_img : "assets/images/default-cover.png"}" 
                                  alt="${music.title}" class="cover-img-suggestion"/>
                             <div class="music-info">
                                 <span class="item-name">${music.title}</span>

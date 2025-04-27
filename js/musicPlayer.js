@@ -24,12 +24,12 @@ function loadMusicPlayer(musicData, resumeTime = 0, shouldPlay = false) {
     
     const playerHTML = `
     <audio id="backgroundMusic" style="display:none;">
-        <source src="src/music/${musicData.audio}" type="audio/mp3">
+        <source src="berliana src/music/${musicData.audio}" type="audio/mp3">
     </audio>
     
     <!-- Fullscreen overlay view -->
     <div id="fullscreenView" class="fullscreen-view">
-        <img src="src/cover_image/${musicData.cover_img}" alt="Album Art" class="fullscreen-cover">
+        <img src="berliana src/cover_image/${musicData.cover_img}" alt="Album Art" class="fullscreen-cover">
         <h2 class="fullscreen-title">${musicData.title}</h2>
         <a href="#" class="fullscreen-artist">${musicData.artist.name}</a>
         
@@ -66,7 +66,7 @@ function loadMusicPlayer(musicData, resumeTime = 0, shouldPlay = false) {
         <div id="minimizedView" class="minimized-view" onclick="expandPlayer()">
             <div class="minimized-content">
                 <div class="minimized-info">
-                    <img src="src/cover_image/${musicData.cover_img}" alt="Album Art" class="minimized-cover">
+                    <img src="berliana src/cover_image/${musicData.cover_img}" alt="Album Art" class="minimized-cover">
                     <a href="#" class="minimized-text">${musicData.title} - ${musicData.artist.name}</a>
                 </div>
                 <button onclick="expandPlayer(event)" class="player-btn">
@@ -78,7 +78,7 @@ function loadMusicPlayer(musicData, resumeTime = 0, shouldPlay = false) {
         <div id="expandedView" class="expanded-view">
             <!-- Media info section -->
             <div class="media-info">
-                <img id="albumArt" src="src/cover_image/${musicData.cover_img}" alt="Album Art" class="album-cover">
+                <img id="albumArt" src="berliana src/cover_image/${musicData.cover_img}" alt="Album Art" class="album-cover">
                 <div class="track-info">
                     <span id="musicTitle" class="music-title">${musicData.title}</span>
                     <a href="#" id="musicArtist" class="music-artist">${musicData.artist.name}</a>
