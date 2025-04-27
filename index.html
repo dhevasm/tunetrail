@@ -96,11 +96,54 @@
                     }, 200);
                   });
                 }
+
+                const loggedUser = JSON.parse(localStorage.getItem('loggedInUser'));
+                if (loggedUser) {
+                    document.querySelector(".only-desktop").innerHTML = `
+                     <a class="dropdown-toggle d-flex align-items-center" href="#" role="button" id="profileDropdown" data-bs-toggle="dropdown" aria-expanded="false" style="text-decoration: none; color: var(--text-color);">
+                    
+                        <div class="nav-avatar-container me-2">
+                        ${loggedUser.name[0]}
+                        </div>
+                      </a>
+                      <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="profileDropdown">
+                            <li><a class="dropdown-item"><i class="fas fa-user me-2"></i>${loggedUser.name}</a></li>
+                            <li><a class="dropdown-item"><i class="fas fa-envelope me-2"></i>${loggedUser.email}</a></li>
+                           
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item"  onclick="logout()"><i class="fas fa-sign-out-alt me-2"></i>Logout</a></li>
+                        </ul>
+                        `;
+
+                        document.querySelector("#authButtonMobile").innerHTML = `
+                            <a onclick="logout()" class="nav-link d-flex align-items-center">
+                              <i class="fa-solid fa-arrow-right-from-bracket me-3"></i>
+                              <span>Logout</span>
+                            </a>
+                        `;
+                }else{
+                  document.querySelector(".only-desktop").innerHTML = ` 
+                  <a class="btn btn-outline-tune rounded-pill me-2" href="login.html">Login</a>
+                  <a class="btn btn-tune rounded-pill" href="register.html">Sign Up</a>`
+                  ;
+
+                  document.querySelector("#authButtonMobile").innerHTML = `
+                     <a href="login.html" class="nav-link d-flex align-items-center">
+                      <i class="fas fa-user me-3"></i>
+                      <span>Login</span>
+                    </a>
+                    `;
+                }
               });
+
+              const logout = () => {
+                localStorage.removeItem('loggedInUser');
+                alert("Berhasil Logout");
+                window.location.href = "index.html";
+              }
             </script>
 
             <div class="ms-auto align-items-center only-desktop d-none">
-            
             </div>
           </div>
         </div>
@@ -127,7 +170,9 @@
               <span>Search</span>
             </p>
           </li>
-         
+          <li class="nav-item" id="authButtonMobile">
+           
+          </li>
         </ul>
       </div>
 
